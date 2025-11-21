@@ -3,6 +3,8 @@ import { deleteLink } from "../api/api";
 import style from "./LinkTable.module.css";
 
 export default function LinkTable({ links, refresh }) {
+  const BACKEND_BASE = "https://tinylink-backend-oohv.onrender.com";
+
   return (
     <table className={style.table}>
       <thead>
@@ -20,7 +22,7 @@ export default function LinkTable({ links, refresh }) {
           <tr key={link.code}>
             <td>
               <a
-                href={`http://localhost:5000/${link.code}`}
+                href={`${BACKEND_BASE}/${link.code}`}
                 target="_blank"
                 rel="noreferrer"
                 className={style.codeLink}
