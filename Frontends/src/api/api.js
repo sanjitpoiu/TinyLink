@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000/api/links";
+// const API_URL = "http://localhost:5000/api/links";
+const API_URL = "https://tinylink-backend-oohv.onrender.com/api/links";
 
 export async function getLinks() {
   return fetch(API_URL).then(res => res.json());
